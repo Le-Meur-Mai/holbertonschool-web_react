@@ -52,3 +52,19 @@ function createEmployee(salary: number | string): Teacher | Director {
     }
 }
 // creation  d'une fonction qui cree des nouvelles instances de Teacher ou Director
+
+function isDirector(employee: Teacher | Director): employee is Director {
+    return (employee as Director).workDirectorTasks !== undefined;
+    // En gros on dit: retourne le type de l'employee comme Director si la methode du directeur n'est pas undefined
+}
+
+function executeWork(employee: Teacher | Director): void {
+
+    if (isDirector(employee)) {
+        console.log(employee.workDirectorTasks());
+    } else {
+        console.log(employee.workTeacherTasks());
+    }
+}
+
+// Affiche differentes sorties suivant si l'employee est le directeur ou pas
