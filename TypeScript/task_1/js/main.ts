@@ -8,3 +8,9 @@ interface Teacher {
 }
 
 // L'interface Teacher ou on peut ajouter ou non yearsOfExperience et d'autres proprietes
+
+interface Directors extends Teacher {
+    numberOfReports: number;
+}
+
+// On etend l'interface de teacher et on rajoute un attribut
