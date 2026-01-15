@@ -68,3 +68,15 @@ function executeWork(employee: Teacher | Director): void {
 }
 
 // Affiche differentes sorties suivant si l'employee est le directeur ou pas
+
+type Subjects = 'Math' | 'History';
+
+function teachClass(todayClass: Subjects): string {
+    if (todayClass === 'Math') {
+        return 'Teaching Math';
+    } else {
+        return 'Teaching History';
+    }
+}
+// Return une string differentes suivant la valeur rentree
+
